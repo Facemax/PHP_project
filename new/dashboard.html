@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Zendure Dashboard</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" media="all" />
+	<link rel="stylesheet" href="css/styles.css">
+	<!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
+	<!--[if lt IE 9]><link rel="stylesheet" href="css/lt-ie-9.css" media="all" /><![endif]-->
+
+	<script src="js/myscript.js"></script>
+
+</head>
+<body onload="welcome()">
+<div class="testing">
+<header class="main">
+	<h1><strong>Zendure</strong> Dashboard</h1>
+	<input type="text" value="search" />
+</header>
+<section class="user">
+	<div class="profile-img">
+		<p id="userface"><img  alt="" height="40" width="40" />  </p>
+		<p id="username"> Welcome </p>
+	</div>
+	<div class="buttons">
+		<button class="ico-font">&#9206;</button>
+		<span class="button dropdown">
+			<a href="#">Notifications <!--<span class="pip">4</span>--></a>
+			<ul class="notice">
+				<li>
+					<hgroup>
+						<h1>This is test1</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>14:00</span></p>
+				</li>
+				<li>
+					<hgroup>
+						<h1>This is test2</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>16:00</span></p>
+				</li>
+			</ul>
+		</span> 
+		<span class="button dropdown">
+			<a href="#">Inbox <!--<span class="pip">6</span>--></a>
+			<ul class="notice">
+				<li>
+					<hgroup>
+						<h1>This is test3</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>18:00</span></p>
+				</li>
+				<li>
+					<hgroup>
+						<h1>This is test4</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>20:00</span></p>
+				</li>
+			</ul>
+		</span> 
+		<span class="button">Live</span>
+		<span class="button">Help</span>
+		<span class="button blue" onclick="exit()">Logout</span>
+	</div>
+</section>
+</div>
+<nav>
+	<ul>
+		<li class="section"><a href="dashboard.html"><span class="icon">&#128711;</span> Dashboard</a></li>
+		<li>
+			<a href="list-new.html"><span class="icon">&#128196;</span>Catalog</a>
+			<ul class="submenu">
+				<li><a href="list-new.html">Create issue list</a></li>
+				<li><a>Wait for update</a></li>
+				<!--<li><a href="list-modify.html">Modify issue list</a></li>
+				<li><a href="list-detail.html">Detail issue list</a></li>
+				<li><a href="list-detele.html">Detele issue list</a></li>-->
+
+			</ul>	
+		</li>
+		<!--<li><a href="users.html"><span class="icon">&#128101;</span> Users &lt;!&ndash;<span class="pip">3</span>&ndash;&gt;</a></li>-->
+
+	</ul>
+</nav>
+
+<section class="alert" id="alert">
+	<div class="green" id="inform">
+		<p id="welcometxt"></p>
+		<span class="close" id="close">&#10006;</span>
+	</div>
+</section>
+<section class="content">
+	<section class="widget" >
+		<header>
+			<span class="icon">&#128200;</span>
+			<hgroup>
+				<h1>Problem statistics</h1>
+			</hgroup>
+		</header>
+		<div class="content" style="overflow-x: auto; overflow-y: auto; height: 500px;">
+			<table id="myTable" border="0" >
+				<thead>
+				<tr>
+
+					<th>Issue Index</th>
+					<th>Product Name</th>
+					<th>Product Type</th>
+					<th>Region</th>
+					<th>Priorities</th>
+					<th>Issue_brief</th>
+					<th>Raised Date(GMT)</th>
+					<th>Submitter</th>
+					<th>Editor</th>
+					<th>Issue_status</th>
+					<th>Datetime(GMT)</th>
+
+
+				</tr>
+				</thead>
+				<tbody  id="tbMain">
+
+				</tbody>
+			</table>
+		</div>
+
+	</section>
+
+
+	<div class="widget-container">
+		<div style="height:80px ">
+		<p align="right">Zendure dashboard made by David Liu :)</p>
+
+
+			<div class="loader" id="loader">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="js/jquery.wysiwyg.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/cycle.js"></script>
+<script src="js/jquery.checkbox.min.js"></script>
+<script src="js/flot.js"></script>
+<script src="js/flot.resize.js"></script>
+<script src="js/flot-graphs.js"></script>
+<script src="js/flot-time.js"></script>
+<script src="js/cycle.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+	// Feature slider for graphs
+	$('.cycle').cycle({
+		fx: "scrollHorz",
+		timeout: 0,
+		slideResize: 0,
+		prev:    '.left-btn',
+		next:    '.right-btn'
+	});
+    setTimeout('document.getElementById("close").click()',1500);
+	setTimeout(table_show(),2000);
+</script>
+</body>
+</html>

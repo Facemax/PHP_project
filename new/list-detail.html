@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Zendure Dashboard</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" media="all" />
+	<link rel="stylesheet" href="css/styles.css">
+	<!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
+	<!--[if lt IE 9]><link rel="stylesheet" href="css/lt-ie-9.css" media="all" /><![endif]-->
+
+	<script src="js/myscript.js"></script>
+
+</head>
+<body onload="welcome()">
+<div class="testing">
+<header class="main">
+	<h1><strong>Zendure</strong> Dashboard</h1>
+	<input type="text" value="search" />
+</header>
+<section class="user">
+	<div class="profile-img">
+		<p id="userface"><img  alt="" height="40" width="40" />  </p>
+		<p id="username"> Welcome </p>
+	</div>
+	<div class="buttons">
+		<button class="ico-font">&#9206;</button>
+		<span class="button dropdown">
+			<a href="#">Notifications <!--<span class="pip">4</span>--></a>
+			<ul class="notice">
+				<li>
+					<hgroup>
+						<h1>This is test1</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>14:00</span></p>
+				</li>
+				<li>
+					<hgroup>
+						<h1>This is test2</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>16:00</span></p>
+				</li>
+			</ul>
+		</span> 
+		<span class="button dropdown">
+			<a href="#">Inbox <!--<span class="pip">6</span>--></a>
+			<ul class="notice">
+				<li>
+					<hgroup>
+						<h1>This is test3</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>18:00</span></p>
+				</li>
+				<li>
+					<hgroup>
+						<h1>This is test4</h1>
+						<h2>The System function are not available temporarily because of debugging.</h2>
+					</hgroup>
+					<p><span>20:00</span></p>
+				</li>
+			</ul>
+		</span> 
+		<span class="button">Live</span>
+		<span class="button">Help</span>
+		<span class="button blue" onclick="exit()">Logout</span>
+	</div>
+</section>
+</div>
+<nav>
+	<ul>
+		<li><a href="dashboard.html"><span class="icon">&#128711;</span> Dashboard</a></li>
+		<li class="section">
+			<a href="list-new.html"><span class="icon">&#128196;</span>Catalog</a>
+			<ul class="submenu">
+				<li><a href="list-new.html">Create issue list</a></li>
+				<li><a>Wait for update</a></li>
+				<!--<li><a href="list-modify.html">Modify question list</a></li>
+				<li><a href="list-detail.html">Detail question list</a></li>
+				<li><a href="list-detele.html">Detele question list</a></li>-->
+			</ul>	
+		</li>
+		<!--<li><a href="users.html"><span class="icon">&#128101;</span> Users &lt;!&ndash;<span class="pip">3</span>&ndash;&gt;</a></li>-->
+
+	</ul>
+</nav>
+
+<section class="alert" id="alert">
+	<div class="green" id="inform">
+		<p id="welcometxt" ></p>
+		<span class="close" id="close">&#10006;</span>
+	</div>
+</section>
+
+<section class="content">
+
+	<div  >
+		<section class="widget" id="div1"  >
+			<header>
+				<span class="icon">&#128196;</span>
+				<hgroup>
+					<h1 id="issue_id">New function</h1>
+				</hgroup>
+			</header>
+			<div class="content" style="overflow-x: auto; overflow-y: auto; height: 800px;">
+
+
+			<!--<table >
+				<tr>
+					<td ><h1 class="mysize"  >Product Name:<nobr id="Product_name"></nobr></h1></td>
+					<td ><h1 class="mysize"  >Product Type:<nobr id="Product_type"></nobr></h1></td>
+					<td><h1 class="mysize"  >Priorities:<nobr id="Priorities"></nobr></h1></td>
+					<td><h1 class="mysize">Region: <nobr id="Region"></nobr></h1></td>
+				</tr>
+				<tr>
+
+				</tr>
+			</table>
+
+			<h1 class="mysize" >Raised Date(GMT): <nobr id="Raised_date"></nobr></h1>
+				<h1 class="mysize">Customer Name:</h1>
+				<p class="mysize" id="Customer_name">loading...</p>
+				<h1 class="mysize">Customer Contact:</h1>
+				<p class="mysize" id="Customer_contact">loading...</p>
+				<h1 class="mysize">Issue brief:</h1>
+				<p class="mysize" id="Issue_brief">loading...</p>
+			<h1 class="mysize">Issue Detail Description:</h1>
+			<p class="mysize" id="Issue_detail_description">loading...</p>
+			<h1 class="mysize">Root Cause</h1>
+			<p class="mysize" id="Root_cause">loading...</p>
+			<h1 class="mysize">Repley</h1>
+			<p class="mysize" id="Repley">loading...</p>
+			<h1 class="mysize" >Issue Status: <nobr id="Issue_Status"></nobr></h1>
+			<h1 class="mysize" >Close_date(GMT):<nobr id="Close_date"></nobr></h1>
+			<h1 class="mysize">Attachment:   <a href="#"  id="Attachment"style="color: red;font-size: 18px;margin-left: 10px">loading...</a></h1>
+			<h1 class="mysize" >Datetime(GMT):<nobr id="Datetime"></nobr></h1>-->
+
+				<div id="div4" >
+					<h1 class="mysize">Product Name:</h1>
+					<p  class="my" id="Product_name" >loading...</p>
+					<br>
+					<h1 class="mysize">Product Type:</h1>
+					<p  class="my" id="Product_type">loading...</p>
+					<br>
+					<h1 class="mysize">Priorities:</h1>
+					<p  class="my" id="Priorities">loading...</p>
+					<br>
+					<h1 class="mysize">Region:</h1>
+					<p  class="my" id="Region">loading...</p>
+					<br>
+					<h1 class="mysize">Raised Date(GMT):</h1>
+					<p  class="my" id="Raised_date">loading...</p>
+					<br>
+					<h1 class="mysize">Customer Name:</h1>
+					<p class="my" id="Customer_name">loading...</p>
+					<br>
+					<h1 class="mysize">Customer Contact:</h1>
+					<p class="my" id="Customer_contact">loading...</p>
+					<br>
+					<h1 class="mysize">Issue brief:</h1>
+					<p class="my" id="Issue_brief">loading...</p>
+					<br>
+					<h1 class="mysize">Issue Detail Description:</h1>
+					<p class="my" id="Issue_detail_description">loading...</p>
+					<br>
+					<h1 class="mysize" >Datetime(GMT):</h1>
+					<p class="my" id="Datetime"></p>
+					<br>
+					<h1 class="mysize">Root Cause:</h1>
+					<p class="my" id="Root_cause">loading...</p>
+					<br>
+					<h1 class="mysize">Reply:</h1>
+					<p class="my" id="Repley">loading...</p>
+					<br>
+					<h1 class="mysize" >Issue Status: </h1>
+					<p class="my" id="Issue_Status"></p>
+					<br>
+					<h1 class="mysize" >Close_date(GMT):</h1>
+					<p class="my" id="Close_date"></p>
+					<br>
+					<h1 class="mysize" >Submitter Email: </h1><nobr ><p class="my" id="s_email">loading...</p></nobr>
+					<br>
+					<h1 class="mysize" >Editor Email: </h1><nobr ><p class="my" id="e_email">loading...</p></nobr>
+					<br>
+					<h1 class="mysize" >Analyst Email: </h1><nobr ><p class="my" id="a_email">loading...</p></nobr>
+					<br>
+					<h1 class="mysize">Attachment:   <a href="#"  id="Attachment"style="color: red;font-size: 18px;margin-left: 10px">loading...</a></h1>
+					<br>
+				</div>
+
+			<div id="div3"  >
+				<label class="mysize" for="Root_Cause_new">Root Cause:</label>
+				<input type="text" class="mysize" id="Root_Cause_new" name="Root_Cause" >
+				<label class="mysize" for="Repley_new">Repley:</label>
+				<input type="text" class="mysize" id="Repley_new" name="Repley" >
+				<label class="mysize" for="Close_Date_new">Close Date:</label>
+				<input type="text" class="mysize" id="Close_Date_new" name="Closed_Date" >
+				<label class="mysize" for="Issue_Status_new">Issue Status:</label>
+				<select class="mysize" id="Issue_Status_new" name="Issue_Status">
+					<option value ="Open">Open</option>
+					<option value ="In progress">In progress</option>
+					<option value="Close">Close</option>
+					<option value="No Fix Plan">No Fix Plan</option>
+				</select>
+				<CENTER>
+					<button type="button" id="btn" style="margin-right: 10px;margin-left: 10px;" onclick="update_detail()">Submit</button>
+				</CENTER>
+			</div>
+
+			</div>
+
+		</section>
+
+		<!--<section class="widget 	small" id="div2" style="display: none">
+			<header>
+				<span class="icon">&#59153;</span>
+				<hgroup>
+					<h1>Input opinion</h1>
+				</hgroup>
+			</header>
+		<label class="mysize" for="Root_Cause_new">Root Cause</label>
+			<input type="text" class="mysize" id="Root_Cause_new" name="Root_Cause" >
+			<label class="mysize" for="Repley_new">Repley</label>
+			<input type="text" class="mysize" id="Repley_new" name="Repley" >
+			<label class="mysize" for="Close_Date_new">Close Date</label>
+			<input type="text" class="mysize" id="Close_Date_new" name="Closed_Date" >
+			<label class="mysize" for="Issue_Status_new">Issue Status</label>
+			<select class="mysize" id="Issue_Status_new" name="Issue_Status">
+				<option value ="Open">Open</option>
+				<option value ="In progress">In progress</option>
+				<option value="Close">Close</option>
+				<option value="No Fix Plan">No Fix Plan</option>
+			</select>
+			<button type="button" id="btn" style="float: right;margin-right: 10px;margin-left: 10px;" onclick="update_detail()">Submit</button>
+		</section>-->
+		<div class="loader" id="loader" style="display: none">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+		<input id="search"type="text" value="Input Issue Index number" >
+		<center><button id="search_btn" onclick="search_num()">search</button></center>
+	</div>
+
+	<div class="widget-container">
+		<div style="height:80px ">
+		<p align="right">Zendure dashboard made by David Liu :)</p>
+
+
+
+		</div>
+	</div>
+</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="js/jquery.wysiwyg.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/cycle.js"></script>
+<script src="js/jquery.checkbox.min.js"></script>
+<script src="js/flot.js"></script>
+<script src="js/flot.resize.js"></script>
+<script src="js/flot-graphs.js"></script>
+<script src="js/flot-time.js"></script>
+<script src="js/cycle.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+	// Feature slider for graphs
+	$('.cycle').cycle({
+		fx: "scrollHorz",
+		timeout: 0,
+		slideResize: 0,
+		prev:    '.left-btn',
+		next:    '.right-btn'
+	});
+	setTimeout('document.getElementById("close").click()',1500);
+	detail_list(window.location.href.split("=")[1]);
+
+</script>
+</body>
+</html>
