@@ -1,0 +1,54 @@
+CREATE TABLE `Users` (
+          `ID` int(11) NOT NULL AUTO_INCREMENT,
+	  `POWER` varchar(50),   
+          `USERNAME` varchar(50) NOT NULL,   
+          `PASSWORD` varchar(100) NOT NULL,
+	`EMAIL` varchar(100) NOT NULL,
+	`DATETIME` varchar(100) NOT NULL,
+          PRIMARY KEY (`ID`)            
+        ) ENGINE=MEMORY AUTO_INCREMENT=201800001
+
+
+CREATE TABLE`Issue`(
+	`Issue_id` int(11) NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY (`Issue_id`),
+	`Product_name` varchar(200) NOT NULL,
+	`Product_type` varchar(200) NOT NULL,
+	`Customer_name` varchar(200) NOT NULL,
+	`Customer_contact` varchar(2000) NOT NULL,
+	`Region` varchar(200) NOT NULL,
+	`Raised_date` varchar(200) NOT NULL,
+	`Issue_brief` varchar(8000),
+	`Issue_detail_description` varchar(8000),
+	`Priorities` varchar(50) NOT NULL,
+	`Root_Cause` varchar(8000),
+	`Repley` varchar(8000),
+	`Issue_status` varchar(50) ,
+	`Close_date` varchar(50),
+  	 `Attachment_id` varchar(50),
+	`User_id` varchar(100) NOT NULL,
+	`Datetime` varchar(100) NOT NULL		        
+	)ENGINE=MEMORY AUTO_INCREMENT=201800001
+
+CREATE TABLE`Issue`(
+	`Issue_id` int(11) NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY (`Issue_id`),
+	`Product_name` varchar(200) NOT NULL,
+	`Product_type` varchar(200) NOT NULL,
+	`Customer_name` varchar(200) NOT NULL,
+	`Customer_contact` varchar(2000) NOT NULL,
+	`Region` varchar(200) NOT NULL,
+	`Raised_date` varchar(200) NOT NULL,
+	`Issue_brief` varchar(8000),
+	`Issue_detail_description` varchar(8000),
+	`Priorities` varchar(50) NOT NULL,
+	`Root_Cause` varchar(8000),
+	`Repley` varchar(8000),
+	`Issue_status` varchar(50) ,
+	`Close_date` varchar(50),
+  	 `Attachment_id` varchar(50),
+	`Submitter_email` varchar(100),
+	`Editor_email` varchar(100),
+	`Analyst_email` varchar(100),
+	`Datetime` varchar(100) NOT NULL		        
+	)ENGINE=MEMORY AUTO_INCREMENT=201800001
